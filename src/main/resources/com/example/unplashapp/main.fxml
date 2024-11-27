@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.unplashapp.Controller"
+      alignment="CENTER" stylesheets="@styles.css" minWidth="520" minHeight="820">
+    <Label text="Welcome to Image Search" styleClass="title-label"/>
+
+    <TextField fx:id="searchTextField" promptText="Search images..." maxWidth="300"/>
+
+    <ChoiceBox fx:id="filterChoiceBox" maxWidth="300" />
+
+    <Button fx:id="fetchButton" text="Fetch Images" onAction="#fetchImages" maxWidth="300"/>
+
+    <ProgressIndicator fx:id="progressIndicator" visible="false"/>
+
+    <ScrollPane fitToWidth="true" fitToHeight="true" maxHeight="500">
+        <VBox fx:id="imageContainer" />
+    </ScrollPane>
+
+</VBox>
